@@ -3,6 +3,7 @@
 A simple and interactive web application for creating and sharing personalized greetings. Users can enter names and generate a beautiful personalized greeting experience.
 
 ## 🌐 Live Demo
+[Greeting app](https://greetings-card-sigma.vercel.app/)
 
 
 ## ✨ Features
