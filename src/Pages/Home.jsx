@@ -2,6 +2,7 @@ import { useContext } from "react";
 import myPic from "../assets/PXL_20260702_162334271~2.jpg";
 import DataContext from "../Context/DataContext";
 import DownScroll from "../Components/DownScroll";
+import NameForm from "../Components/NameForm";
 
 const Home = () => {
   const { name } = useContext(DataContext);
@@ -23,8 +24,10 @@ const Home = () => {
       </section>
 
       {/* Content below hero */}
-      <section className="mx-auto mt-10 max-w-3xl">
+      <section className="mx-auto mt-10 space-y-3 max-w-3xl">
+        <h3 className="text-xl text-center font-semibold">Please fill this form ☺️</h3>
         <DownScroll />
+        <NameForm></NameForm>
       </section>
     </div>
   );
