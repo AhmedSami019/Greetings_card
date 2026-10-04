@@ -1,6 +1,19 @@
-const NameForm = () => {
+import { useContext } from "react";
+import DataContext from "../Context/DataContext";
+import { useNavigate } from "react-router";
 
-    // use context 
+const NameForm = () => {
+  // use context
+  const {
+    BabyName,
+    setBabyName,
+    FatherName,
+    setFatherName,
+    MotherName,
+    setMotherName,
+  } = useContext(DataContext);
+
+  const navigate = useNavigate()
 
   // get data
   const handleSubmit = (e) => {
@@ -9,10 +22,14 @@ const NameForm = () => {
     const formData = new FormData(e.target);
 
     const data = Object.fromEntries(formData);
+    setBabyName(data.baby);
+    setFatherName(data.father);
+    setMotherName(data.mother);
 
-
-    console.log(data);
+    // navigate
+    navigate('/greetings')
   };
+  console.log(BabyName, FatherName, MotherName);
 
   return (
     <div className="">
@@ -45,7 +62,7 @@ const NameForm = () => {
               placeholder="Mother's name"
             />
 
-            <button className="btn btn-neutral mt-4">Next</button>
+            <button className="btn btn-primary mt-4">Next</button>
           </fieldset>
         </form>
       </div>

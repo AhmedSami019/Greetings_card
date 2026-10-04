@@ -2,9 +2,9 @@ import { useState } from "react";
 import DataContext from "./DataContext";
 
 const DataProvider = ({children}) => {
-    const {BabyName, setBabyName} = useState('Baby')
-    const {FatherName, setFatherName} = useState('Father')
-    const {MotherName, setMotherName} = useState('Mother')
+    const [BabyName, setBabyName] = useState('Baby')
+    const [FatherName, setFatherName] = useState('Father')
+    const [MotherName, setMotherName] = useState('Mother')
     const data = {
         BabyName, 
         setBabyName, 
