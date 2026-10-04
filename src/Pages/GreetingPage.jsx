@@ -1,13 +1,12 @@
-import { useContext, useRef } from "react";
-import DataContext from "../Context/DataContext";
+import { useRef } from "react";
 import Family from "../Components/Family";
 import Baby from "../Components/Baby";
 
 const GreetingPage = () => {
-  const { BabyName, FatherName, MotherName } = useContext(DataContext);
 
-  console.log(BabyName, FatherName, MotherName);
+  const savedData = localStorage.getItem("nameData");
 
+  const nameData = savedData ? JSON.parse(savedData) : null;
   // to control the modal
   const noRef = useRef(null);
   const yesRef = useRef(null);
@@ -20,9 +19,13 @@ const GreetingPage = () => {
         </p>
         <h2 className="text-3xl font-bold">Hello!</h2>
         <p className="text-4xl font-semibold">
-          <span className="text-[#DA6556] font-extrabold">{FatherName} </span>{" "}
+          <span className="text-[#DA6556] font-extrabold">
+            {nameData ? nameData.father : "Father"}{" "}
+          </span>{" "}
           and{" "}
-          <span className="text-[#DA6556] font-extrabold">{MotherName} </span>
+          <span className="text-[#DA6556] font-extrabold">
+            {nameData ? nameData.mother : "Mother"}{" "}
+          </span>
         </p>
         {/* <p className="text-xl">You are Welcome to born a New Baby Name <span className="text-[#DA6556] font-extrabold">{BabyName} </span></p> */}
       </section>
@@ -46,7 +49,9 @@ const GreetingPage = () => {
 
       {/* 4th section */}
       <section>
-        <h3 className="text-3xl text-[#DA6556] font-extrabold">{BabyName}</h3>
+        <h3 className="text-3xl text-[#DA6556] font-extrabold">
+          {nameData ? nameData.baby : "Baby"}
+        </h3>
         <p className="text-xl font-semibold">
           You are Welcome on this Earth 🌎
         </p>
@@ -97,8 +102,8 @@ const GreetingPage = () => {
               <span className="text-[#DA6556]">ধন্যবাদ</span> আপনাকে 😊
             </h3>
             <p className="py-4">
-              তবে ভাগ্য ভালো আপনি no select করেন নাই। <br /> করলে কিন্তু কাহিনী হয়ে যেত  <br /> whatever now
-              You can send{" "}
+              তবে ভাগ্য ভালো আপনি no select করেন নাই। <br /> করলে কিন্তু কাহিনী
+              হয়ে যেত <br /> whatever now You can send{" "}
               <span className="text-[#DA6556] font-semibold">Message</span> to
               me!
             </p>

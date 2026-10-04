@@ -26,6 +26,15 @@ const NameForm = () => {
     setFatherName(data.father);
     setMotherName(data.mother);
 
+     const nameData = {
+      baby: data.baby,
+      father: data.father,
+      mother: data.mother,
+    };
+
+    localStorage.setItem("nameData", JSON.stringify(nameData));
+
+
     // navigate
     navigate('/greetings')
   };

@@ -1,19 +1,41 @@
-# React + Vite
+# 🎉 Greeting App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive web application for creating and sharing personalized greetings. Users can enter names and generate a beautiful personalized greeting experience.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- 🎉 Personalized greeting experience
+- 👶 Enter baby, father, and mother names
+- 💾 Saves entered information using LocalStorage
+- 🔄 Data remains available after page refresh
+- 🚀 Smooth navigation between pages
+- 🎨 Responsive and modern UI
+- ✨ Lottie animations
+- 📱 Mobile-friendly design
+- 🔗 Easy access to social media
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+- React.js
+- React Router
+- Tailwind CSS
+- DaisyUI
+- JavaScript
+- Context API
+- LocalStorage
+- Lottie React
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Preview
+
+*Add screenshots of your application here.*
+
+## 🚀 Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ahmedsami019/Greetings_card
