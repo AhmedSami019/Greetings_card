@@ -1,0 +1,18 @@
+/* import font from google */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* for tailwindcss */
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* fonts */
+.urbanist {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.hind-siliguri {
+  font-family: "Hind Siliguri", sans-serif;
+  font-style: normal;
+}
